@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="630998e5-4776-4248-a738-bd7b5f41f1ed" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/alibaba.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/alibaba.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/alibaba_get_availability.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/alibaba_get_availability.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\Projects\pycharm\FedLaAvg\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Wjiw7za19TAjucbh9qtjhpybq7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/utils" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\pycharm\FedLaAvg\utils" />
+      <recent name="D:\Projects\pycharm\FedLaAvg\train\old_run_slinks" />
+      <recent name="D:\Projects\pycharm\FedLaAvg\train" />
+      <recent name="D:\Projects\pycharm\FedLaAvg\last-avg-new\run\bak" />
+      <recent name="D:\Projects\pycharm\last-avg-new\run\exp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\pycharm\FedLaAvg\utils" />
+      <recent name="D:\Projects\pycharm\FedLaAvg\train" />
+      <recent name="D:\Projects\pycharm\FedLaAvg\train\runs" />
+      <recent name="D:\Projects\pycharm\FedLaAvg\cache" />
+      <recent name="D:\Projects\pycharm\FedLaAvg\linear_regression" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.alibaba_get_availability">
+    <configuration name="alibaba" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FedLaAvg" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/alibaba.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="alibaba_get_availability" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FedLaAvg" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/alibaba_get_availability.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="debug" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FedLaAvg" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/train" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train/debug.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FedLaAvg" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/train" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train/server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="thread_debug" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FedLaAvg" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/train" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train/thread_debug.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.alibaba_get_availability" />
+        <item itemvalue="Python.alibaba" />
+        <item itemvalue="Python.debug" />
+        <item itemvalue="Python.server" />
+        <item itemvalue="Python.thread_debug" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="630998e5-4776-4248-a738-bd7b5f41f1ed" name="Default Changelist" comment="" />
+      <created>1579669640808</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579669640808</updated>
+      <workItem from="1579669644013" duration="1687000" />
+      <workItem from="1579673413627" duration="5054000" />
+      <workItem from="1579763346629" duration="1819000" />
+      <workItem from="1579765193625" duration="4606000" />
+      <workItem from="1579795212553" duration="123000" />
+      <workItem from="1579837163699" duration="1043000" />
+      <workItem from="1579871192494" duration="695000" />
+      <workItem from="1579922595486" duration="1182000" />
+      <workItem from="1579952379730" duration="4021000" />
+      <workItem from="1580009384717" duration="10232000" />
+      <workItem from="1580613609649" duration="665000" />
+      <workItem from="1580632811810" duration="4772000" />
+      <workItem from="1580728603258" duration="1642000" />
+      <workItem from="1580819077060" duration="1165000" />
+      <workItem from="1581004101252" duration="280000" />
+      <workItem from="1581045721229" duration="1791000" />
+      <workItem from="1586614943330" duration="1574000" />
+      <workItem from="1586616540450" duration="271000" />
+      <workItem from="1586616871524" duration="768000" />
+      <workItem from="1586749405343" duration="836000" />
+      <workItem from="1586756631907" duration="674000" />
+      <workItem from="1586764979516" duration="5670000" />
+      <workItem from="1586836373542" duration="7727000" />
+      <workItem from="1586875378910" duration="3388000" />
+      <workItem from="1586921893556" duration="1249000" />
+      <workItem from="1586947896236" duration="1258000" />
+      <workItem from="1586955581140" duration="677000" />
+      <workItem from="1587016700285" duration="2370000" />
+      <workItem from="1587026190559" duration="6107000" />
+      <workItem from="1587047796725" duration="936000" />
+      <workItem from="1587371527560" duration="13000" />
+      <workItem from="1587623944176" duration="1318000" />
+      <workItem from="1587788544538" duration="448000" />
+      <workItem from="1587892508662" duration="74000" />
+      <workItem from="1587988286356" duration="2188000" />
+      <workItem from="1588128672159" duration="599000" />
+      <workItem from="1588148009912" duration="616000" />
+      <workItem from="1588150888108" duration="619000" />
+      <workItem from="1588564323246" duration="17000" />
+      <workItem from="1591158271428" duration="13557000" />
+      <workItem from="1591327686817" duration="4864000" />
+      <workItem from="1591421445844" duration="551000" />
+      <workItem from="1596440848606" duration="730000" />
+      <workItem from="1596769406233" duration="3749000" />
+      <workItem from="1596782998985" duration="21234000" />
+      <workItem from="1596867119392" duration="37585000" />
+      <workItem from="1596940238077" duration="26994000" />
+      <workItem from="1596982729218" duration="158000" />
+      <workItem from="1597026881972" duration="13002000" />
+      <workItem from="1597117078472" duration="7828000" />
+      <workItem from="1597199644611" duration="3469000" />
+      <workItem from="1597285906799" duration="5709000" />
+      <workItem from="1597653445180" duration="5625000" />
+      <workItem from="1597818280764" duration="21496000" />
+      <workItem from="1597890535770" duration="23373000" />
+      <workItem from="1597975084654" duration="4954000" />
+      <workItem from="1598073708457" duration="1342000" />
+      <workItem from="1598240984238" duration="18129000" />
+      <workItem from="1598282263264" duration="740000" />
+      <workItem from="1598322708292" duration="29203000" />
+      <workItem from="1598363070317" duration="6383000" />
+      <workItem from="1598370927680" duration="2462000" />
+      <workItem from="1598406623582" duration="9229000" />
+      <workItem from="1598433169008" duration="843000" />
+      <workItem from="1598520544615" duration="4363000" />
+      <workItem from="1598586285698" duration="3150000" />
+      <workItem from="1598602165513" duration="822000" />
+      <workItem from="1598605278544" duration="78000" />
+      <workItem from="1598612705626" duration="1577000" />
+      <workItem from="1598631650878" duration="29000" />
+      <workItem from="1601175468194" duration="1488000" />
+      <workItem from="1601195869159" duration="11200000" />
+      <workItem from="1601215700868" duration="82000" />
+      <workItem from="1601348924639" duration="637000" />
+      <workItem from="1601532942709" duration="1452000" />
+      <workItem from="1601642566816" duration="3638000" />
+      <workItem from="1601709792545" duration="5231000" />
+      <workItem from="1601734023062" duration="2254000" />
+      <workItem from="1601801353446" duration="5326000" />
+      <workItem from="1601885993230" duration="7511000" />
+      <workItem from="1601984458577" duration="2409000" />
+      <workItem from="1601988433685" duration="229000" />
+      <workItem from="1602086769717" duration="705000" />
+      <workItem from="1602122378382" duration="3324000" />
+      <workItem from="1602164639777" duration="2030000" />
+      <workItem from="1602255439561" duration="595000" />
+      <workItem from="1602317592496" duration="15363000" />
+      <workItem from="1602405546558" duration="3585000" />
+      <workItem from="1602480510403" duration="13674000" />
+      <workItem from="1602569384941" duration="2739000" />
+      <workItem from="1602767012200" duration="55000" />
+      <workItem from="1602823587850" duration="2888000" />
+      <workItem from="1602838172498" duration="2373000" />
+      <workItem from="1602914899220" duration="16988000" />
+      <workItem from="1603001360437" duration="10646000" />
+      <workItem from="1603015091216" duration="22301000" />
+      <workItem from="1603077286196" duration="43085000" />
+      <workItem from="1603167377720" duration="32345000" />
+      <workItem from="1603216103890" duration="2709000" />
+      <workItem from="1603281542530" duration="14403000" />
+      <workItem from="1603327985703" duration="18724000" />
+      <workItem from="1603455432208" duration="610000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/.PyCharm2019.2/system/remote_sources/1690399287/201545291/pickle.py</url>
+          <line>1572</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/train/model.py</url>
+          <line>153</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/partition.py</url>
+          <line>97</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/sentiment140.py</url>
+          <line>340</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/sentiment140.py</url>
+          <line>352</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/train/prepare_clients.py</url>
+          <line>172</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/alibaba_get_availability.py</url>
+          <line>67</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/alibaba_get_availability.py</url>
+          <line>209</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/widgets.py</url>
+          <line>215</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/alibaba.py</url>
+          <line>74</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/train/model.py</url>
+          <line>225</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/din.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="153" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/alibaba.py</url>
+          <line>267</line>
+          <option name="timeStamp" value="154" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/alibaba_get_availability.py</url>
+          <line>112</line>
+          <option name="timeStamp" value="155" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/alibaba.py</url>
+          <line>210</line>
+          <option name="timeStamp" value="156" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/alibaba_get_availability.py</url>
+          <line>296</line>
+          <option name="timeStamp" value="158" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/alibaba_get_availability.py</url>
+          <line>137</line>
+          <option name="timeStamp" value="159" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="set((1, 2)) == set((2, 1))" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FedLaAvg$prepare_clients.coverage" NAME="prepare_clients Coverage Results" MODIFIED="1602523980496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/train" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$simulator.coverage" NAME="simulator Coverage Results" MODIFIED="1596871865762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/train" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$alibaba__1_.coverage" NAME="alibaba (1) Coverage Results" MODIFIED="1603133250660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$logger.coverage" NAME="logger Coverage Results" MODIFIED="1596883894485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$one_dim_example2.coverage" NAME="one_dim_example2 Coverage Results" MODIFIED="1597659334015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/toy_examples" />
+    <SUITE FILE_PATH="coverage/last_avg_new$base_multi.coverage" NAME="base-multi Coverage Results" MODIFIED="1586880708238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="/" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$momentum.coverage" NAME="momentum Coverage Results" MODIFIED="1597303443789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/toy_examples" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$partition.coverage" NAME="partition Coverage Results" MODIFIED="1601904535409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$user_behavior.coverage" NAME="user_behavior Coverage Results" MODIFIED="1603004538042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$widgets.coverage" NAME="widgets Coverage Results" MODIFIED="1603110309788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$load_from_tensorflow.coverage" NAME="load_from_tensorflow Coverage Results" MODIFIED="1603132956372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$sentiment140.coverage" NAME="sentiment140 Coverage Results" MODIFIED="1602405699973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$din.coverage" NAME="din Coverage Results" MODIFIED="1603135604245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$alibaba_get_availability.coverage" NAME="alibaba_get_availability Coverage Results" MODIFIED="1603370413144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$client.coverage" NAME="client Coverage Results" MODIFIED="1597658240844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/train" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$debug.coverage" NAME="debug Coverage Results" MODIFIED="1603204195567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/train" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$base_multi.coverage" NAME="base-multi Coverage Results" MODIFIED="1596770227807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="/" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$model.coverage" NAME="model Coverage Results" MODIFIED="1603183602502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/train" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$thread_debug.coverage" NAME="thread_debug Coverage Results" MODIFIED="1603193295408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/train" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$server.coverage" NAME="server Coverage Results" MODIFIED="1603195548350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/train" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$server_debug.coverage" NAME="server_debug Coverage Results" MODIFIED="1603170825131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/train" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$one_dim_example.coverage" NAME="one_dim_example Coverage Results" MODIFIED="1601645637209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/toy_examples" />
+    <SUITE FILE_PATH="coverage/FedLaAvg$alibaba.coverage" NAME="alibaba Coverage Results" MODIFIED="1603369175520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+  </component>
+</project>

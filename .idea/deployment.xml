@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="FL1">
+    <serverData>
+      <paths name="FL1">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/FedLaAvg" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/toy_examples/runs" />
+            <excludedPath local="true" path="$PROJECT_DIR$/data" />
+            <excludedPath local="true" path="$PROJECT_DIR$/train/runs" />
+            <excludedPath local="true" path="$PROJECT_DIR$/train/tensorboard" />
+            <excludedPath local="true" path="$PROJECT_DIR$/train/old_run_slinks" />
+            <excludedPath local="true" path="$PROJECT_DIR$/train/old_runs" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="FL2">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/FedLaAvg" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/data" />
+            <excludedPath local="true" path="$PROJECT_DIR$/toy_examples/runs" />
+            <excludedPath local="true" path="$PROJECT_DIR$/train/runs" />
+            <excludedPath local="true" path="$PROJECT_DIR$/train/tensorboard" />
+            <excludedPath local="true" path="$PROJECT_DIR$/train/old_run_slinks" />
+            <excludedPath local="true" path="$PROJECT_DIR$/train/old_runs" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="FL3">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/FedLaAvg" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/data" />
+            <excludedPath local="true" path="$PROJECT_DIR$/toy_examples/runs" />
+            <excludedPath local="true" path="$PROJECT_DIR$/train/runs" />
+            <excludedPath local="true" path="$PROJECT_DIR$/train/tensorboard" />
+            <excludedPath local="true" path="$PROJECT_DIR$/train/old_run_slinks" />
+            <excludedPath local="true" path="$PROJECT_DIR$/train/old_runs" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="FL5">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="FL6">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="trush classification">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
