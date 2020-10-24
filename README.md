@@ -91,11 +91,12 @@ Please run experiments via train/server.py. Enter "cd train && python server.py 
   <img src="figure/overview.png" width = "80%" height = "80%" alt="Algorithm Overview" align=center />
 </p>
 
-### Availability setting
+### Availability setting for MNIST
 <p align="center">
   <img src="figure/gantt.png" width = "80%" height = "80%" alt="Availability Setting for MNIST" align=center />
 </p>
 
+### Availability setting for Sentiment140
 <p align="center">
   <img src="figure/sentiment140.png" width = "80%" height = "80%" alt="Availability Setting for CIFAR10" align=center />
 </p>
