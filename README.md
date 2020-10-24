@@ -85,7 +85,7 @@ Please run experiments via train/server.py. Enter "cd train && python server.py 
 + --filter_clients FILTER_CLIENTS
   + filter clients possessing data <= this threshold, work only for sentiment140 (include SGD and GD)
  
-## Algorithm illustration and some experiment results
+## Algorithm illustration and some experiment setups
 ### Algorithm overview 
 <p align="center">
   <img src="figure/overview.png" width = "80%" height = "80%" alt="Algorithm Overview" align=center />
