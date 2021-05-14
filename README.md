@@ -36,20 +36,6 @@ unzip -d raw_data/Sentiment140/ raw_data/Sentiment140/trainingandtestdata.zip
 ```
 - Then, please run experiments via train/server.py. Enter "python train/server.py -h" to see the help. 
 
-## Dependency
-+ beautifulsoup4 (4.9.1)
-+ bs4 (0.0.1)
-+ gensim (3.8.3)
-+ lxml (4.5.2)
-+ matplotlib (3.2.1)
-+ nltk (3.5)
-+ numpy (1.18.2)
-+ Pillow (7.1.1)
-+ tensorboard (2.2.2)
-+ torch (1.4.0)
-+ torchvision (0.5.0)
-
-
 ## Instructions to Reproduce the Results
 
 ### MNIST FedAvg
