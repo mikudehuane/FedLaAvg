@@ -2,7 +2,7 @@ import os.path as osp
 import os
 
 import torch
-from .config import project_dir
+from config import project_dir
 
 cifar10_classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
 
