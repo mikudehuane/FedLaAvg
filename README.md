@@ -76,6 +76,65 @@ python server.py -ds mnist -alg lastavg -N 1000 -be 0.1 -C 1 -E 100 --alpha 0.1 
 ```
 
 ### MNIST FedProx
+```shell script
+# E=50 D=1
+python server.py -ds mnist -alg fedavg -N 1000 -be 0.1 -C 10 -E 50 --alpha 0.1 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number -mu 1.0
+
+# E=100 D=1
+python server.py -ds mnist -alg fedavg -N 1000 -be 0.1 -C 10 -E 100 --alpha 0.1 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number -mu 1.0
+
+# E=100 D=3
+python server.py -ds mnist -alg fedavg -N 1000 -be 0.1 -C 10 -E 100 --alpha 0.3 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number -mu 1.0
+
+# E=100 D=5
+python server.py -ds mnist -alg fedavg -N 1000 -be 0.1 -C 10 -E 100 --alpha 0.5 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number -mu 1.0
+
+# E=200 D=1
+python server.py -ds mnist -alg fedavg -N 1000 -be 0.1 -C 10 -E 200 --alpha 0.1 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number -mu 1.0
+```
+
+### MNIST FedSGD
+```shell script
+# E=50 D=1
+python server.py -ds mnist -alg fedavg -N 1000 -be 0.1 -C 1 -E 50 --alpha 0.1 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number
+
+# E=100 D=1
+python server.py -ds mnist -alg fedavg -N 1000 -be 0.1 -C 1 -E 100 --alpha 0.1 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number
+
+# E=100 D=3
+python server.py -ds mnist -alg fedavg -N 1000 -be 0.1 -C 1 -E 100 --alpha 0.3 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number
+
+# E=100 D=5
+python server.py -ds mnist -alg fedavg -N 1000 -be 0.1 -C 1 -E 100 --alpha 0.5 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number
+
+# E=200 D=1
+python server.py -ds mnist -alg fedavg -N 1000 -be 0.1 -C 1 -E 200 --alpha 0.1 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number
+```
+
+### MNIST FedWaitAvg
+```shell script
+# E=50 D=1
+python server.py -ds mnist -alg waitavg -N 1000 -be 0.1 -C 10 -E 50 --alpha 0.1 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number
+
+# E=100 D=1
+python server.py -ds mnist -alg waitavg -N 1000 -be 0.1 -C 10 -E 100 --alpha 0.1 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number
+
+# E=100 D=3
+python server.py -ds mnist -alg waitavg -N 1000 -be 0.1 -C 10 -E 100 --alpha 0.3 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number
+
+# E=100 D=5
+python server.py -ds mnist -alg waitavg -N 1000 -be 0.1 -C 10 -E 100 --alpha 0.5 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number
+
+# E=200 D=1
+python server.py -ds mnist -alg waitavg -N 1000 -be 0.1 -C 10 -E 200 --alpha 0.1 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number
+```
+
+
+### MNIST Sequential SGD
+```shell script
+python server.py -ds mnist -alg sgd -N 10 -be 0.1 -C 10 -E 10 --alpha 0.5 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -te 5 --batch_size 500
+```
+
 
 ## Citation
 ```
