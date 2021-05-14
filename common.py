@@ -2,13 +2,11 @@ import os.path as osp
 import os
 
 import torch
+from .config import project_dir
 
 cifar10_classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
 
-project_dir = '/' + osp.join("root", "FedLaAvg")
-# project_dir = 'D:\\Projects\\repo\\FedLaAvg'
-raw_data_dir = '/' + osp.join("root", "data")
-# raw_data_dir = 'D:\\Projects\\data'
+raw_data_dir = osp.join(project_dir, 'raw_data')
 data_cache_dir = osp.join(project_dir, 'data')
 
 cache_fd = osp.join(project_dir, 'cache')
@@ -53,4 +51,4 @@ seed_for_client_sampling = 1
 seed_for_drop = 1
 other_seed = 1
 
-nlp_embedding_fd = '/' + osp.join('root', 'models', 'glove')
+nlp_embedding_fd = osp.join(project_dir, 'models', 'glove')
