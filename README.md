@@ -6,9 +6,35 @@ Implementation of https://arxiv.org/abs/2002.07399
 
 ## Usage
 - Please download [initialize.sh](initialize.sh) into an empty directory, and run it via the 
-    following command to initialize the project
+    following command to initialize the project 
+    (type the commands in your shell rather than copy to a shell script please).
 ```shell script
-sh initialize.sh
+# clone project
+mkdir FedLaAvg
+cd FedLaAvg
+git clone https://github.com/mikudehuane/FedLaAvg scripts
+
+# install packages
+conda create -n FedLaAvg python==3.6.9
+conda activate FedLaAvg
+pip install -r scripts/requirements.txt
+
+# configuring project
+echo "project_dir = \"$(pwd)\"" > scripts/config.py
+
+# generating initial model
+mkdir cache data
+python scripts/train/model.py
+
+# download glove embedding
+mkdir -p models/glove/
+wget -P models/glove/ http://nlp.stanford.edu/data/glove.twitter.27B.zip
+unzip models/glove/glove.twitter.27B.zip
+
+# download sentiment dataset
+mkdir -p raw_data/Sentiment140
+wget -P raw_data/Sentiment140/ http://cs.stanford.edu/people/alecmgo/trainingandtestdata.zip
+unzip raw_data/Sentiment140/sentiment140.zip
 ```
 - Then, please run experiments via train/server.py. Enter "python train/server.py -h" to see the help. 
 
