@@ -6,8 +6,9 @@ import torch
 cifar10_classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
 
 project_dir = '/' + osp.join("root", "FedLaAvg")
-# project_dir = 'D:\\Projects'
+# project_dir = 'D:\\Projects\\repo\\FedLaAvg'
 raw_data_dir = '/' + osp.join("root", "data")
+# raw_data_dir = 'D:\\Projects\\data'
 data_cache_dir = osp.join(project_dir, 'data')
 
 cache_fd = osp.join(project_dir, 'cache')
@@ -27,8 +28,8 @@ alibaba_meta_fp = osp.join(alibaba_fd, 'taobao-item-info')
 
 lr_configure_fd = osp.join(project_dir, 'train', 'lr_configures')
 
-tb_slink_fd = "tensorboard"
-record_fd = "runs"
+tb_slink_fd = osp.join(project_dir, 'log', "tensorboard")
+record_fd = osp.join('log', "runs")
 log_fd = "log"
 checkpoint_fd = "checkpoint"
 tensorboard_fd = "tensorboard"

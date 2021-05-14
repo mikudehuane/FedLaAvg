@@ -8,9 +8,6 @@ import torch
 from torch.utils.tensorboard import SummaryWriter
 
 import common
-from utils.widgets import get_spare_dir
-import pickle as pkl
-import re
 
 
 class Logger:
@@ -23,7 +20,7 @@ class Logger:
                 "gs_rel_error", "gs_error_norm", "test_auc", "train_auc"]
 
     def __init__(self, run_name):
-        self.father_fd = osp.join(common.record_fd, run_name)
+        self.father_fd = osp.join(common.project_dir, common.record_fd, run_name)
         self.log_fd = osp.join(self.father_fd, common.log_fd)
         self.tb_fd = osp.join(self.father_fd, common.tensorboard_fd)
         self.ck_fd = osp.join(self.father_fd, common.checkpoint_fd)
@@ -33,10 +30,11 @@ class Logger:
         os.makedirs(self.ck_fd, exist_ok=True)
 
         # make the soft link to tensorboard
-        if not osp.exists(osp.join(common.tb_slink_fd, run_name)):
+        slink_fp = osp.join(common.tb_slink_fd, run_name)
+        if not osp.exists(slink_fp):
             os.makedirs(common.tb_slink_fd, exist_ok=True)
             tb_abs_path = osp.abspath(self.tb_fd)
-            os.symlink(tb_abs_path, osp.join(common.tb_slink_fd, run_name))
+            os.symlink(tb_abs_path, slink_fp)
 
         if self.has_checkpoint():
             c_round = self.load_meta()['current_round']

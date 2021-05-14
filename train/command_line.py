@@ -12,7 +12,7 @@ parser.add_argument('-rn', '--run_name', default=None,
 parser.add_argument('-ds', '--dataset', default='cifar10', choices=('cifar10', 'sentiment140', 'mnist', 'ali'),
                     help='dataset to use')
 # focused parameters
-parser.add_argument('-alg', '--algorithm', default='lastavg', choices=('gd', 'sgd', 'lastavg', 'fedavg'),
+parser.add_argument('-alg', '--algorithm', default='lastavg', choices=('gd', 'sgd', 'lastavg', 'fedavg', 'waitavg'),
                     help="algorithm to be used")
 parser.add_argument('-N', '--num_total_clients', default=1000, type=int, help="total number of clients")
 parser.add_argument('-be', '--beta', default=0.1, type=float, help="proportion of selected clients")

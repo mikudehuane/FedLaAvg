@@ -11,7 +11,6 @@ import _init_paths
 import pickle
 import time
 
-import threadpool
 import torch.utils.data
 import torchvision
 from torch import nn
@@ -43,6 +42,8 @@ class Server:
         self.grad_sum = None
         self.running_grad_sum = None
         self.latest_grad_sum_avg = None
+        self.grad_sum_cache = None
+        self.participated_clients = set()  # clients that have participated, hold the ids
 
     def new_round(self, model):
         if self.mode == 'fedavg':
@@ -52,6 +53,9 @@ class Server:
         elif self.mode == 'lastavg':
             if self.latest_grad_sum_avg is None:
                 self.latest_grad_sum_avg = [torch.zeros_like(par) for par in model.parameters()]
+        elif self.mode == 'waitavg':
+            self.grad_sum_cache = [torch.zeros_like(par) for par in model.parameters()]
+            self.participated_clients.clear()
         else:
             raise ValueError(f"Unexpected mode {self.mode}")
 
@@ -64,6 +68,9 @@ class Server:
                 gs += client_gs / K
         elif self.mode == 'lastavg':
             for gs, client_gs in zip(self.latest_grad_sum_avg, client_upload):
+                gs += client_gs / N
+        elif self.mode == 'waitavg':
+            for gs, client_gs in zip(self.grad_sum_cache, client_upload):
                 gs += client_gs / N
         else:
             raise ValueError(f"Unexpected mode {self.mode}")
@@ -78,6 +85,11 @@ class Server:
         elif self.mode == 'lastavg':
             for gs, par in zip(self.latest_grad_sum_avg, model.parameters()):
                 par.data.sub_(lr * gs)
+        elif self.mode == 'waitavg':
+            for gs, par in zip(self.grad_sum_cache, model.parameters()):
+                par.data.sub_(lr * gs)
+        else:
+            raise ValueError(f"Unexpected mode {self.mode}")
 
     @staticmethod
     def pick_clients(clients, K, pick_outdated, current_round):
@@ -98,6 +110,17 @@ class Server:
             else:
                 picked_clients = random.sample(available_clients, K)
             return picked_clients
+
+    def pick_clients_no_participated(self, clients, current_round):
+        # pick clients that have not participated in current 'epoch' training
+        picked_clients = []
+        for client in clients:
+            client: Client
+            if client.is_available(current_round):
+                if client.id not in self.participated_clients:
+                    picked_clients.append(client)
+                    self.participated_clients.add(client.id)
+        return picked_clients
 
 
 def train_(run_name, test_loader, train_loader, alg, log_args, log_argv,
@@ -148,14 +171,13 @@ def train_(run_name, test_loader, train_loader, alg, log_args, log_argv,
         train_iter = iter(train_loader)
     elif alg == 'gd':
         num_training_samples = kwargs.pop('num_training_samples')
-    elif alg == 'fedavg' or alg == 'lastavg':
+    elif alg in ('fedavg', 'lastavg', 'waitavg'):
         server: Server = kwargs.pop('server')
         clients = kwargs.pop('clients')
         num_training_samples = sum([client.num_samples for client in clients])
         print(f"Actual number of training samples: {num_training_samples}")
         K = kwargs.pop("K", 100)
         C = kwargs.pop("C", 10)
-        num_threads = kwargs.pop("num_threads", 1)
         scale_in_it = kwargs.pop("scale_in_it", False)
         if logger.has_checkpoint():
             server = logger.load_server()
@@ -173,7 +195,9 @@ def train_(run_name, test_loader, train_loader, alg, log_args, log_argv,
 
     logger.add_meta(log_args, log_argv, current_round)
 
-    best_auc = -1
+    num_updates = 0  # for waitavg
+    if alg == 'waitavg':
+        server.new_round(model)  # first round
     while True:
         lr_ = lr(current_round)
         c_time = time.time()
@@ -283,39 +307,6 @@ def train_(run_name, test_loader, train_loader, alg, log_args, log_argv,
             picked_clients = server.pick_clients(clients, K, pick_outdated=pick_outdated,
                                                  current_round=_current_round)
 
-            # client: Client
-            # client_pool = threadpool.ThreadPool(num_threads)
-            # lock = threading.Lock()
-            # if alg == 'fedavg':
-            #     def client_thread_fedavg(client):
-            #         scale_inner = len(clients) * client.num_samples / num_training_samples
-            #         grad_sum_ = [None]
-            #         client.train(model, criterion, lr_, scale=scale_inner, scale_in_it=scale_in_it,
-            #                      C=C, current_round=current_round, abs_grad_sum_=grad_sum_, mu_FedProx=mu_FedProx)
-            #         try:
-            #             lock.acquire()
-            #             server.aggregate(grad_sum_[0], K=len(picked_clients))
-            #         finally:
-            #             lock.release()
-            #     reqs = threadpool.makeRequests(client_thread_fedavg, picked_clients)
-            #     [client_pool.putRequest(req) for req in reqs]
-            #     client_pool.wait()
-            #     server.update(model, lr=lr_, momentum=momentum)
-            # elif alg == 'lastavg':
-            #     def client_thread_lastavg(client):
-            #         scale_inner = len(clients) * client.num_samples / num_training_samples
-            #         grad_sum_diff = client.train(model, criterion, lr_, scale=scale_inner, scale_in_it=scale_in_it,
-            #                                      C=C, current_round=current_round)
-            #         try:
-            #             lock.acquire()
-            #             server.aggregate(grad_sum_diff, N=len(clients))
-            #         finally:
-            #             lock.release()
-            #     reqs = threadpool.makeRequests(client_thread_lastavg, picked_clients)
-            #     [client_pool.putRequest(req) for req in reqs]
-            #     client_pool.wait()
-            #     if current_round >= num_non_update_rounds:
-            #         server.update(model, lr=lr_)
             client: Client
             if alg == 'fedavg':
                 for client in picked_clients:
@@ -333,6 +324,29 @@ def train_(run_name, test_loader, train_loader, alg, log_args, log_argv,
                     server.aggregate(grad_sum_diff, N=len(clients))
                 if current_round >= num_non_update_rounds:
                     server.update(model, lr=lr_)
+        elif alg == 'waitavg':
+            _isa_input = clients[0].is_available_input
+            if _isa_input == 'round':
+                _current_round = current_round
+            elif _isa_input == 'time':
+                _current_round = simulated_time
+            else:
+                raise RuntimeError(f"clients weirdly initialized with is_available_input = {_isa_input}")
+            picked_clients = server.pick_clients_no_participated(clients=clients, current_round=_current_round)
+
+            client: Client
+            for client in picked_clients:
+                scale_inner = len(clients) * client.num_samples / num_training_samples
+                grad_sum_ = [None]
+                client.train(model, criterion, lr_, scale=scale_inner, scale_in_it=scale_in_it,
+                             C=C, current_round=current_round, abs_grad_sum_=grad_sum_)
+                server.aggregate(grad_sum_[0], N=len(clients))
+
+            if len(server.participated_clients) == len(clients):  # all clients participated update model
+                server.update(model, lr=lr_)
+                num_updates += 1
+                print('\nserver updated model in round: %d for the %d times' % (current_round, num_updates))
+                server.new_round(model)
         else:
             raise ValueError(f"Unrecognized alg: {alg}")
 
@@ -346,11 +360,11 @@ def train_(run_name, test_loader, train_loader, alg, log_args, log_argv,
                               'time': time.time() - start_time + time_base,
                               'simulated_time': simulated_time})
             logger.dump_model(model)
-            if alg in ('fedavg', 'lastavg'):
+            if alg in ('fedavg', 'lastavg', 'waitavg'):
                 logger.dump_server(server)
                 logger.dump_clients(clients)
             logger.remove_backup()
-        if alg in ('fedavg', 'lastavg') and current_round % statistics_every == 0:
+        if alg in ('fedavg', 'lastavg', 'waitavg') and current_round % statistics_every == 0:
             logger.add_statistics(clients, current_round)
         if current_round == num_rounds:
             break
@@ -418,7 +432,6 @@ def main():
     shuffle = args.shuffle
     filter_clients = args.filter_clients
     filter_clients_up = args.filter_clients_up
-    num_threads = args.num_threads
     scale_in_it = args.scale_in_it
     # image classification parameters
     alpha = args.alpha
@@ -667,7 +680,7 @@ def main():
         testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size_when_test, shuffle=False)
 
     # server and clients
-    if alg in ('fedavg', 'lastavg'):
+    if alg in ('fedavg', 'lastavg', 'waitavg'):
         server = Server(alg)
         print("getting clients...")
         if dataset_indicator in ('cifar10', 'mnist'):
@@ -727,7 +740,7 @@ def main():
     elif alg == 'fedavg':
         train_(run_name=run_name, test_loader=testloader, train_loader=trainloader, alg=alg,
                server=server, clients=clients, K=K, C=C, momentum=momentum, E=E, mu_FedProx=mu_FedProx,
-               scale_in_it=scale_in_it, num_threads=num_threads,
+               scale_in_it=scale_in_it,
                criterion=criterion_mean, test_criterion=criterion_sum,
                lr=lr, num_rounds=num_rounds, model_ori_path=ori_model,
                print_every=print_every, tb_every=tb_every, checkpoint_every=checkpoint_every,
@@ -738,7 +751,18 @@ def main():
     elif alg == 'lastavg':
         train_(run_name=run_name, test_loader=testloader, train_loader=trainloader, alg=alg,
                server=server, clients=clients, K=K, C=C, E=E, num_non_update_rounds=num_non_update_rounds,
-               scale_in_it=scale_in_it, num_threads=num_threads,
+               scale_in_it=scale_in_it,
+               criterion=criterion_mean, test_criterion=criterion_sum,
+               lr=lr, num_rounds=num_rounds, model_ori_path=ori_model,
+               print_every=print_every, tb_every=tb_every, checkpoint_every=checkpoint_every,
+               statistics_every=sta_every, max_checked=max_test,
+               log_args=args, log_argv=sys.argv,
+               log_auc=log_auc,
+               reserve_checkpoint_steps=reserve_checkpoint_steps)
+    elif alg == 'waitavg':
+        train_(run_name=run_name, test_loader=testloader, train_loader=trainloader, alg=alg,
+               server=server, clients=clients, K=K, C=C, E=E, num_non_update_rounds=num_non_update_rounds,
+               scale_in_it=scale_in_it,
                criterion=criterion_mean, test_criterion=criterion_sum,
                lr=lr, num_rounds=num_rounds, model_ori_path=ori_model,
                print_every=print_every, tb_every=tb_every, checkpoint_every=checkpoint_every,
@@ -749,6 +773,4 @@ def main():
 
 
 if __name__ == "__main__":
-    multiprocessing.set_start_method('spawn')
-    # _test()
     main()

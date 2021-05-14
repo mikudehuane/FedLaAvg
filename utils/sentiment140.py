@@ -3,7 +3,7 @@ import copy
 import math
 import random
 
-import _init_paths
+# import _init_paths
 import pickle
 import re
 
@@ -27,11 +27,10 @@ from gensim.models import KeyedVectors
 
 from train.model import DCNN, LSTM2
 
-
 class Sentiment140Dataset(Dataset):
     SENTIMENT, ID, DATETIME, QUERY, CLIENT_ID, TWEET = range(6)
 
-    def __init__(self, preprocess, embedding_fn, transform=None):
+    def __init__(self, preprocess, embedding_fn=None, transform=None):
         super().__init__()
         if transform == 'glove_trans':
             self.transform = self.glove_trans
@@ -262,7 +261,7 @@ class Sentiment140Dataset(Dataset):
         num_hours_busy = kwargs.pop("num_hours_busy", 16)
 
         client2id = {}
-        clients = []
+        clients = []  # index: id from 0, content: data indices
         clients_available_data = []
 
         current_id = 0
@@ -294,15 +293,16 @@ class Sentiment140Dataset(Dataset):
                 raise ValueError(f"strategy={strategy} not recognized")
 
         if strategy == "blocked":
-            clients = [Client(self, indices, ("check_time", a_blocks, num_hours1block), collate_fn=collate_fn, **kwargs)
-                       for indices, a_blocks in zip(clients, clients_available_data)]
+            clients = [Client(self, indices, ("check_time", a_blocks, num_hours1block),
+                              id=client_id, collate_fn=collate_fn, **kwargs)
+                       for client_id, (indices, a_blocks) in enumerate(zip(clients, clients_available_data))]
         elif strategy == "modeled_mid":
             num_seconds_day = 24 * 3600
             num_seconds_sleep = num_seconds_day - num_hours_busy * 3600
             clients = [Client(self, indices,
                               ("check_in_range", infer_sleep(tweets_time, num_seconds_day=num_seconds_day, num_seconds_sleep=num_seconds_sleep)),
-                              collate_fn=collate_fn, **kwargs)
-                       for indices, tweets_time in zip(clients, clients_available_data)]
+                              id=client_id, collate_fn=collate_fn, **kwargs)
+                       for client_id, (indices, tweets_time) in enumerate(zip(clients, clients_available_data))]
         else:
             raise ValueError(f"strategy={strategy} not recognized")
         return clients
@@ -382,6 +382,7 @@ class Sentiment140Dataset(Dataset):
         tweets, labels = tuple(zip(*batch))
         seq_lens = [len(tweet) for tweet in tweets]
         order = np.argsort(seq_lens)[::-1]
+        # TODO(islander): variant length
         tweets = np.array(tweets)[order]
         labels = np.array(labels)[order]
         tweets = [torch.from_numpy(tweet) for tweet in tweets]
@@ -852,10 +853,12 @@ def plot_posi_ratio_with_time(dataset):
 def _test():
     dataset = Sentiment140Dataset(ComposedProcess(
         BasicProcess(),
-        CleanTweet(verbose=True),
-    ), embedding_fn="glove.twitter.27B.25d", transform="glove_trans")
+        # CleanTweet(verbose=True),
+    ))
     dataset.filter_clients_(40)
     print(dataset.count_clients())
+    print(len(dataset))
+    exit()
     dataset.random_select_clients_(1000)
     dataset.time_variation_(num_blocks=24)
     trainset, testset = dataset.partition()
