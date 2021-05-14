@@ -1,4 +1,7 @@
 import _init_paths
+
+import random
+
 from math import ceil
 
 import numpy
@@ -223,6 +226,10 @@ class DynamicMaxPool(nn.Module):
 
 def main():
     from utils import widgets
+
+    torch.random.manual_seed(0)
+    random.seed(0)
+    numpy.random.seed(0)
 
     for model in [Logistic(), LSTM2(input_size=25, hidden_size=16)]:
         if model.exists_initial():
