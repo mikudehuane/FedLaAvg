@@ -29,12 +29,12 @@ python scripts/train/model.py
 # download glove embedding
 mkdir -p models/glove/
 wget -P models/glove/ http://nlp.stanford.edu/data/glove.twitter.27B.zip
-unzip models/glove/glove.twitter.27B.zip
+unzip -d models/glove/ models/glove/glove.twitter.27B.zip
 
 # download sentiment dataset
 mkdir -p raw_data/Sentiment140
 wget -P raw_data/Sentiment140/ http://cs.stanford.edu/people/alecmgo/trainingandtestdata.zip
-unzip raw_data/Sentiment140/sentiment140.zip
+unzip -d raw_data/Sentiment140/ raw_data/Sentiment140/trainingandtestdata.zip
 ```
 - Then, please run experiments via train/server.py. Enter "python train/server.py -h" to see the help. 
 
