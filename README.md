@@ -59,19 +59,19 @@ python server.py -ds mnist -alg lastavg -N 1000 -be 0.1 -C 10 -E 100 --alpha 0.5
 # E=200 D=1
 python server.py -ds mnist -alg lastavg -N 1000 -be 0.1 -C 10 -E 200 --alpha 0.1 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number
 
-# \beta = 0.05
+# \beta=0.05
 python server.py -ds mnist -alg lastavg -N 1000 -be 0.05 -C 10 -E 100 --alpha 0.1 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number
 
 # all available clients participate
 python server.py -ds mnist -alg lastavg -N 1000 -be 1.0 -C 10 -E 100 --alpha 0.1 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number
 
-# N = 200
+# N=200
 python server.py -ds mnist -alg lastavg -N 200 -be 0.1 -C 10 -E 100 --alpha 0.1 --num_rounds 4000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number
 
-# N = 600
+# N=600
 python server.py -ds mnist -alg lastavg -N 600 -be 0.1 -C 10 -E 100 --alpha 0.1 --num_rounds 4000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number
 
-# C = 1
+# C=1
 python server.py -ds mnist -alg lastavg -N 1000 -be 0.1 -C 1 -E 100 --alpha 0.1 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -stg number
 ```
 
@@ -133,6 +133,25 @@ python server.py -ds mnist -alg waitavg -N 1000 -be 0.1 -C 10 -E 200 --alpha 0.1
 ### MNIST Sequential SGD
 ```shell script
 python server.py -ds mnist -alg sgd -N 10 -be 0.1 -C 10 -E 10 --alpha 0.5 --num_rounds 10000 --lr_strategy const --init_lr 0.01 -nm 0.0 -ns 1.0 -te 5 --batch_size 500
+```
+
+
+### Sentiment140 FedAvg
+```shell script
+# E=24 \alpha=0
+python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 24 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1
+
+# E=120 \alpha=0
+python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1
+
+# E=120 \alpha=0.25
+python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1 --fv_min 0.25 --fv_max 0.75
+
+# E=120 \alpha=0.5
+python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1 --fv_min 0.5 --fv_max 0.5
+
+# E=240 \alpha=0
+python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 240 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1
 ```
 
 
