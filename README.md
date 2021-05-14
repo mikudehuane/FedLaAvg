@@ -15,8 +15,13 @@ Implementation of https://arxiv.org/abs/2002.07399
 + torchvision (0.5.0)
 
 ## Usage
-Please run experiments via train/server.py. Enter "cd train && python server.py -h" to see the help. Running parameters are discribed as follows (running argument may have changed, please refer to the output of "python server.py -h" when running the code).
+Please run experiments via train/server.py. 
+Enter "python train/server.py -h" to see the help. 
 
+### Instructions to Reproduce the Results
+```shell script
+#d
+```
  
 ## Algorithm illustration
 ![Algorithm Overview](figure/overview.png)
