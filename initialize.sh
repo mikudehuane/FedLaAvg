@@ -5,4 +5,5 @@ cd FedLaAvg || exit
 git clone https://github.com/mikudehuane/FedLaAvg scripts
 pip install -r scripts/requirements.txt
 echo "project_dir = \"$(pwd)\"" > scripts/config.py
+mkdir cache data
 python scripts/train/model.py

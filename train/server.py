@@ -606,9 +606,9 @@ def main():
     elif dataset_indicator == 'mnist':
         transform= transforms.Compose([transforms.ToTensor(),
                                        transforms.Normalize((normalize_mean,), (normalize_std,))])
-        trainset = torchvision.datasets.MNIST(root=common.raw_data_dir, train=True, download=False,
+        trainset = torchvision.datasets.MNIST(root=common.raw_data_dir, train=True, download=True,
                                                 transform=transform)
-        testset = torchvision.datasets.MNIST(root=common.raw_data_dir, train=False, download=False,
+        testset = torchvision.datasets.MNIST(root=common.raw_data_dir, train=False, download=True,
                                                transform=transform)
     elif dataset_indicator == 'sentiment140':
         if nlp_algorithm == 'bow':

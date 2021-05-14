@@ -5,8 +5,12 @@ Implementation of https://arxiv.org/abs/2002.07399
 ![Algorithm Overview](figure/overview.png)
 
 ## Usage
-Please run experiments via train/server.py. 
-Enter "python train/server.py -h" to see the help. 
+- Please download [initialize.sh](initialize.sh) into an empty directory, and run it via the 
+    following command to initialize the project
+```shell script
+sh initialize.sh
+```
+- Then, please run experiments via train/server.py. Enter "python train/server.py -h" to see the help. 
 
 ## Dependency
 + beautifulsoup4 (4.9.1)
