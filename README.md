@@ -5,9 +5,7 @@ Implementation of https://arxiv.org/abs/2002.07399
 ![Algorithm Overview](figure/overview.png)
 
 ## Usage
-- Please download [initialize.sh](initialize.sh) into an empty directory, and run it via the 
-    following command to initialize the project 
-    (type the commands in your shell rather than copy to a shell script please).
+- Please type the following commands in your shell to initialize the project and download necessary data.
 ```shell script
 # clone project
 mkdir FedLaAvg
