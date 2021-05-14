@@ -169,112 +169,112 @@ python server.py -ds mnist -alg sgd -N 10 -be 0.1 -C 10 -E 10 --alpha 0.5 --num_
 ### Sentiment140 FedAvg
 ```shell script
 # E=24 \alpha=0
-python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 24 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1
+python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 24 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1
 
 # E=120 \alpha=0
-python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1
+python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1
 
 # E=120 \alpha=0.25
-python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1 --fv_min 0.25 --fv_max 0.75
+python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1 --fv_min 0.25 --fv_max 0.75
 
 # E=120 \alpha=0.5
-python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1 --fv_min 0.5 --fv_max 0.5
+python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1 --fv_min 0.5 --fv_max 0.5
 
 # E=240 \alpha=0
-python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 240 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1
+python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 240 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1
 ```
 
 ### Sentiment140 FedLaAvg
 ```shell script
 # E=24 \alpha=0
-python server.py -ds sentiment140 -alg lastavg -N 1000 -be 0.1 -C 10 -E 24 --lr_strategy const -lr 0.01 --num_rounds 30000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1
+python server.py -ds sentiment140 -alg lastavg -N 1000 -be 0.1 -C 10 -E 24 --lr_strategy const -lr 0.01 --num_rounds 30000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1
 
 # E=120 \alpha=0
-python server.py -ds sentiment140 -alg lastavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1
+python server.py -ds sentiment140 -alg lastavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1
 
 # E=120 \alpha=0.25
-python server.py -ds sentiment140 -alg lastavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1 --fv_min 0.25 --fv_max 0.75
+python server.py -ds sentiment140 -alg lastavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1 --fv_min 0.25 --fv_max 0.75
 
 # E=120 \alpha=0.5
-python server.py -ds sentiment140 -alg lastavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1 --fv_min 0.5 --fv_max 0.5
+python server.py -ds sentiment140 -alg lastavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1 --fv_min 0.5 --fv_max 0.5
 
 # E=240 \alpha=0
-python server.py -ds sentiment140 -alg lastavg -N 1000 -be 0.1 -C 10 -E 240 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1
+python server.py -ds sentiment140 -alg lastavg -N 1000 -be 0.1 -C 10 -E 240 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1
 
 # \beta=0.2
-python server.py -ds sentiment140 -alg lastavg -N 1000 -be 0.2 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1
+python server.py -ds sentiment140 -alg lastavg -N 1000 -be 0.2 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1
 
 # all available clients participate
-python server.py -ds sentiment140 -alg lastavg -N 1000 -be 1.0 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1
+python server.py -ds sentiment140 -alg lastavg -N 1000 -be 1.0 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1
 
 # N=200
-python server.py -ds sentiment140 -alg lastavg -N 200 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1
+python server.py -ds sentiment140 -alg lastavg -N 200 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1
 
 # N=600
-python server.py -ds sentiment140 -alg lastavg -N 200 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1
+python server.py -ds sentiment140 -alg lastavg -N 200 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1
 
 # C=1
-python server.py -ds sentiment140 -alg lastavg -N 1000 -be 0.1 -C 1 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1
+python server.py -ds sentiment140 -alg lastavg -N 1000 -be 0.1 -C 1 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1
 ```
 
 ### Sentiment140 FedSGD
 ```shell script
 # E=24 \alpha=0
-python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 1 -E 24 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1
+python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 1 -E 24 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1
 
 # E=120 \alpha=0
-python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 1 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1
+python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 1 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1
 
 # E=120 \alpha=0.25
-python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 1 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1 --fv_min 0.25 --fv_max 0.75
+python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 1 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1 --fv_min 0.25 --fv_max 0.75
 
 # E=120 \alpha=0.5
-python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 1 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1 --fv_min 0.5 --fv_max 0.5
+python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 1 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1 --fv_min 0.5 --fv_max 0.5
 
 # E=240 \alpha=0
-python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 1 -E 240 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1
+python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 1 -E 240 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1
 ```
 
 
 ### Sentiment140 FedProx
 ```shell script
 # E=24 \alpha=0
-python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 24 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1 -mu 0.01
+python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 24 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1 -mu 0.01
 
 # E=120 \alpha=0
-python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1  -mu 0.01
+python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1  -mu 0.01
 
 # E=120 \alpha=0.25
-python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1 --fv_min 0.25 --fv_max 0.75 -mu 0.01
+python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1 --fv_min 0.25 --fv_max 0.75 -mu 0.01
 
 # E=120 \alpha=0.5
-python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1 --fv_min 0.5 --fv_max 0.5 -mu 0.01
+python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1 --fv_min 0.5 --fv_max 0.5 -mu 0.01
 
 # E=240 \alpha=0
-python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 240 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1 -mu 0.01
+python server.py -ds sentiment140 -alg fedavg -N 1000 -be 0.1 -C 10 -E 240 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1 -mu 0.01
 ```
 
 ### Sentiment140 FedWaitAvg
 ```shell script
 # E=24 \alpha=0
-python server.py -ds sentiment140 -alg waitavg -N 1000 -be 0.1 -C 10 -E 24 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1 --tb_every=200 --checkpoint_every=1000
+python server.py -ds sentiment140 -alg waitavg -N 1000 -be 0.1 -C 10 -E 24 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1 --tb_every=200 --checkpoint_every=1000
 
 # E=120 \alpha=0
-python server.py -ds sentiment140 -alg waitavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1 --tb_every=200 --checkpoint_every=1000
+python server.py -ds sentiment140 -alg waitavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1 --tb_every=200 --checkpoint_every=1000
 
 # E=120 \alpha=0.25
-python server.py -ds sentiment140 -alg waitavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1 --fv_min 0.25 --fv_max 0.75 --tb_every=200 --checkpoint_every=1000
+python server.py -ds sentiment140 -alg waitavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1 --fv_min 0.25 --fv_max 0.75 --tb_every=200 --checkpoint_every=1000
 
 # E=120 \alpha=0.5
-python server.py -ds sentiment140 -alg waitavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1 --fv_min 0.5 --fv_max 0.5 --tb_every=200 --checkpoint_every=1000
+python server.py -ds sentiment140 -alg waitavg -N 1000 -be 0.1 -C 10 -E 120 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1 --fv_min 0.5 --fv_max 0.5 --tb_every=200 --checkpoint_every=1000
 
 # E=240 \alpha=0
-python server.py -ds sentiment140 -alg waitavg -N 1000 -be 0.1 -C 10 -E 240 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1 --tb_every=200 --checkpoint_every=1000
+python server.py -ds sentiment140 -alg waitavg -N 1000 -be 0.1 -C 10 -E 240 --lr_strategy const -lr 0.01 --num_rounds 50000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1 --tb_every=200 --checkpoint_every=1000
 ```
 
 ### Sentiment140 Sequential SGD
 ```shell script
-python server.py -ds sentiment140 -alg sgd -N 1000 -be 0.001 -C 10 -E 240 --lr_strategy const -lr 0.01 --num_rounds 30000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d -am modeled_mid -fv 1 --batch_size 200
+python server.py -ds sentiment140 -alg sgd -N 1000 -be 0.001 -C 10 -E 240 --lr_strategy const -lr 0.01 --num_rounds 30000 --model_ori lstm_i25_h16 --glove_model glove.twitter.27B.25d.txt -am modeled_mid -fv 1 --batch_size 200
 ```
 
 ## Citation
