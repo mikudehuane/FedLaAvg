@@ -223,15 +223,15 @@ class DynamicMaxPool(nn.Module):
 
 def main():
     from utils import widgets
-    model = Din()
 
-    if model.exists_initial():
-        model.load_initial()
-        raise FileExistsError(f"{model.id} exists")
+    for model in [Logistic(), LSTM2(input_size=25, hidden_size=16)]:
+        if model.exists_initial():
+            model.load_initial()
+            raise FileExistsError(f"{model.id} exists")
 
-    model.save_initial()
+        model.save_initial()
 
-    print(f"{widgets.count_parameters(model)} parameters in {model.id}")
+        print(f"{widgets.count_parameters(model)} parameters in {model.id}")
 
 
 if __name__ == '__main__':
