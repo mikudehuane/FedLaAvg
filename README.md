@@ -20,7 +20,7 @@ conda activate FedLaAvg
 pip install -r scripts/requirements.txt
 
 # configuring project
-echo "project_dir = \"$(pwd)\"" > scripts/config.py
+echo -e "use_cuda = False\nproject_dir = \"$(pwd)\"" > scripts/config.py
 
 # generating initial model
 mkdir cache data

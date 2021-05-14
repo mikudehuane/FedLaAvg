@@ -2,7 +2,7 @@ import os.path as osp
 import os
 
 import torch
-from config import project_dir
+from config import project_dir, use_cuda
 
 cifar10_classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
 
@@ -43,7 +43,6 @@ NUM_MNIST_CLASSES = 10
 NUM_MNIST_TRAIN = 60000
 NUM_MNIST_TEST = 10000
 
-use_cuda = True
 device = torch.device('cuda') if use_cuda else torch.device('cpu')
 
 seed_for_train_test_partition = 1
