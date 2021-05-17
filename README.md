@@ -1,5 +1,5 @@
 # Federated-Latest-Averaging
-Implementation of https://arxiv.org/abs/2002.07399
+Implementation of [Federated Optimization under Intermittent Client Availability](https://arxiv.org/abs/2002.07399)
 
 ## Algorithm illustration
 ![Algorithm Overview](figure/overview.png)
